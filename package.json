@@ -1,0 +1,10 @@
+{
+    "scripts": {
+      "start": "node ."
+    },
+    "dependencies": {
+      "config": "^3.3.6",
+      "ganache-cli": "^6.12.2"
+    }
+  }
+  
