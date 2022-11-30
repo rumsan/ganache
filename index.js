@@ -1,22 +1,16 @@
 const ganache = require("ganache-cli");
-const {
-  mnemonic,
-  db_path,
-  default_balance_ether,
-  port,
-} = require("./config.json");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const server = ganache.server({
-  mnemonic,
-  db_path,
-  default_balance_ether,
+  mnemonic: process.env.MNEMONIC,
+  db_path: process.env.DB_PATH,
+  default_balance_ether: process.env.DEFAULT_BALANCE,
 });
 
-server.listen(port, (err, blockchain) => {
-  console.log(`Ganache running in port: ${port}`);
+server.listen(process.env.PORT, (err, blockchain) => {
+  console.log(`Ganache running in port: ${process.env.PORT}`);
   console.log(
     `Default Account: ${Object.keys(blockchain.personal_accounts)[0]}`
   );
 });
-
-

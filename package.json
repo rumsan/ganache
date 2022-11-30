@@ -1,10 +1,9 @@
 {
-    "scripts": {
-      "start": "node ."
-    },
-    "dependencies": {
-      "config": "^3.3.6",
-      "ganache-cli": "^6.12.2"
-    }
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ganache-cli": "^6.12.2"
   }
-  
+}
